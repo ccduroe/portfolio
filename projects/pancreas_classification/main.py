@@ -20,11 +20,31 @@ def main():
     X_train_resampled, X_test_scaled, X_train_pca, X_test_pca, y_train_resampled, y_test_encoded, label_encoder = preprocess_data(X_train, X_test, y_train, y_test)
 
     # Train and evaluate different models
+    print("=== SVM MODEL ===")
     svm_model = create_svm_model()
     svm_model.fit(X_train_resampled, y_train_resampled)
     y_pred_svm = svm_model.predict(X_test_scaled)
     evaluate_model(y_test_encoded, y_pred_svm, label_encoder)
 
+    print("\n=== DECISION TREE MODEL ===")
+    dt_model = create_decision_tree(max_depth=10)
+    dt_model.fit(X_train_resampled, y_train_resampled)
+    y_pred_dt = dt_model.predict(X_test_scaled)
+    evaluate_model(y_test_encoded, y_pred_dt, label_encoder)
+
+    print("\n=== RANDOM FOREST MODEL ===")
+    rf_model = create_random_forest_model()
+    rf_model.fit(X_train_resampled, y_train_resampled)
+    y_pred_rf = rf_model.predict(X_test_scaled)
+    evaluate_model(y_test_encoded, y_pred_rf, label_encoder)
+
+    print("\n=== ADABOOST MODEL ===")
+    ada_model = create_adaboost_model()
+    ada_model.fit(X_train_resampled, y_train_resampled)
+    y_pred_ada = ada_model.predict(X_test_scaled)
+    evaluate_model(y_test_encoded, y_pred_ada, label_encoder)
+
+    print("\n=== DEEP NEURAL NETWORK ===")
     dnn_model = create_dnn_model(X_train_resampled.shape[1], len(label_encoder.classes_))
     history = train_dnn_model(dnn_model, X_train_resampled, y_train_resampled, X_test_scaled, y_test_encoded)
     y_pred_dnn = tf.argmax(dnn_model.predict(X_test_scaled), axis=1).numpy()
