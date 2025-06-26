@@ -1,0 +1,39 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Large data files (specific to this project)
+*.h5ad
+*.h5
+*.hdf5
+
+# Model and pickle files
+*.pkl
+*.joblib
+*.model
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*~
+
+# Specific to machine learning projects
+*.log
