@@ -1,0 +1,23 @@
+# Large data files specific to this project
+data/*.h5ad
+data/*.txt
+data/*.csv
+
+# Model outputs
+models/*.pkl
+models/*.h5
+
+# Results
+results/
+outputs/
+
+# Python/ML specific
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.model
+*.joblib
+
+# Environment
+venv/
+.env
