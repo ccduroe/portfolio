@@ -6,7 +6,7 @@ This repository showcases my projects in machine learnin and bioinformatics.
 # About Me
 - I have a background in chemistry and have worked as an Analytical Chemist
 - I am currently working as a Senior Laboratory Technician at the University of Delaware 
-_ I am seeking opportunities to transition into the world of data science
+- I am seeking opportunities to transition into the world of data science
 
 ## Projects
 
