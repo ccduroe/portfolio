@@ -27,8 +27,7 @@ def create_adaboost_model():
 
 def create_random_forest_model():
     # Optimized via RandomizedSearchCV
-    # Best parameters from 5-fold CV: n_estimators=500, max_leaf_nodes=16
-    # Also tested: max_depth, min_samples_split, min_samples_leaf
+    # Best parameters: n_estimators=500, max_leaf_nodes=16
     return RandomForestClassifier(n_estimators=500, max_leaf_nodes=16, random_state=42)
 
 def create_dnn_model(input_shape, num_classes):
@@ -44,9 +43,7 @@ def create_dnn_model(input_shape, num_classes):
         Dense(num_classes, activation='softmax')
     ])
 
-    # Optimizer selection: tested 'adam', 'sgd', 'rmsprop'
-    # Best: adam with default learning rate
     model.compile(optimizer='adam',
-		  loss='sparse_categorical_crossentropy', 
+	          loss='sparse_categorical_crossentropy', 
 		  metrics=['accuracy'])
     return model
