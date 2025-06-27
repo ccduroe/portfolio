@@ -52,14 +52,13 @@ To run the main analysis script, execute the following command from the project 
 ```bash
 python main.py
 ```
-
-## Project Structure
+## Project Structure 
 
 portfolio/projects/pancreas_classification/
-├── src/                # Source code modules
-├── data/            # Dataset files
-├── docs/            # Project documentation
-└── main.py             # Main script to run the project
+├─src/                # Source code modules
+├─data/               # Dataset files
+├─main.py             # Main sript to run project      
+└─requirements.txt    # List of project dependecies
 
 ## Key Achievements
 - Developed and compared  machine learning models for cell type classification
