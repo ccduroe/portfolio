@@ -82,4 +82,4 @@ If you use insights or code from this project, please reference:
 - **Email**: [ccduroe@gmail.com](mailto:ccduroe@gmail.com)
 
 ## License
-This project is licensed under the MIT license - see the [`LICENSE`](LICENSE) file for details. 
+This project is licensed under the MIT license - see the [`LICENSE`](../../LICENSE) file for details. 
