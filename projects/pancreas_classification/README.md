@@ -51,6 +51,7 @@ While building upon the foundational work of the original researchers, this proj
 To run the main analysis script, execute the following command from the project root directory:
 ```bash
 python main.py
+```
 
 ## Project Structure
 
